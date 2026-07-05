@@ -1,26 +1,189 @@
-#AI Research Paper Intelligence System
+#  AI Research Paper Recommendation System
 
-A comprehensive AI-powered system for semantic search, summarization, keyword extraction, and named entity recognition on 50,000+ research papers from arXiv.
+An AI-powered Research Paper Recommendation System that helps researchers and students quickly discover relevant research papers using semantic search instead of traditional keyword search.
 
-#Features
+The system retrieves the most relevant papers, generates concise summaries, extracts important keywords, and creates an AI-generated research profile for every recommended paper.
 
-Semantic Search using FAISS
-AI Summarization with BART
-Keyword Extraction with KeyBERT
-Named Entity Recognition (NER)
+---
 
-#Tech Stack
+##  Features
 
-Sentence Transformers (all-MiniLM-L6-v2)
-FAISS for vector search
-BART for summarization
-KeyBERT for keywords
-BERT-base-NER for entities
-Streamlit for web interface
+✅ Semantic Search using Sentence Transformers
 
-#Installation
+✅ Fast similarity search using FAISS
+
+✅ Automatic paper summarization using BART
+
+✅ Keyword extraction using KeyBERT
+
+✅ AI-generated Research Paper Profile using Groq LLaMA 3.3
+
+✅ Displays
+
+- Match Score
+- Paper Title
+- Abstract Preview
+- Summary
+- Keywords
+- Research Area
+- Method Used
+- Dataset
+- Task
+- Contribution
+- Difficulty Level
+- Best For
+- Estimated Reading Time
+
+---
+
+##  Project Pipeline
+
+User Query
+↓
+
+Sentence Transformer Embedding
+
+↓
+
+FAISS Similarity Search
+
+↓
+
+Top-K Relevant Research Papers
+
+↓
+
+BART Summarization
+
+↓
+
+KeyBERT Keyword Extraction
+
+↓
+
+Groq LLaMA Paper Profiling
+
+↓
+
+Final AI Recommendation Report
+
+---
+
+##  Tech Stack
+
+### Programming Language
+
+- Python
+
+### NLP Models
+
+- Sentence Transformers (all-MiniLM-L6-v2)
+- Facebook BART Large CNN
+- KeyBERT
+- Groq LLaMA 3.3 70B
+
+### Libraries
+
+- FAISS
+- Transformers
+- Sentence Transformers
+- KeyBERT
+- Pandas
+- NumPy
+- Scikit-learn
+- Datasets
+
+---
+
+##  Dataset
+
+Dataset used:
+
+**ML-ArXiv Papers Dataset**
+
+- Source: HuggingFace
+- Contains thousands of Machine Learning research papers.
+
+---
+
+##  Installation
+
+```bash
+git clone https://github.com/yourusername/AI-Research-Paper-Recommendation-System.git
+
+cd AI-Research-Paper-Recommendation-System
 
 pip install -r requirements.txt
-python src/simple_data_prep.py
-python src/build_index.py
-streamlit run src/app.py
+```
+
+---
+
+##  Run
+
+```python
+search_and_summarize(
+    "Deep learning in medical imaging",
+    k=2
+)
+```
+
+---
+
+##  Sample Output
+
+The system returns:
+
+- Research paper title
+- Match score
+- Abstract preview
+- AI summary
+- Extracted keywords
+- Research paper profile
+- Reading difficulty
+- Estimated reading time
+
+---
+
+##  Example
+
+**Query**
+
+```
+Deep learning in medical imaging
+```
+
+The system recommends the most relevant papers along with their AI-generated summaries and detailed research profiles.
+
+---
+
+##  Project Structure
+
+```
+AI-Research-Paper-Recommendation-System/
+
+│── notebooks/
+│── paper_embeddings.npy
+│── paper_faiss.index
+│── requirements.txt
+│── README.md
+│── main.py
+```
+
+---
+
+##  Future Improvements
+
+- Streamlit Web Application
+- PDF Upload Support
+- Research Paper Chatbot
+- Citation Generation
+- Download Summary as PDF
+- Multi-language Support
+
+---
+
+##  Author
+
+Fiza Khatoon
+
+Machine Learning & NLP Enthusiast
